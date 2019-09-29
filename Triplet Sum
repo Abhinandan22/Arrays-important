@@ -1,0 +1,56 @@
+public class Solution{	
+
+	public static void tripletSum(int[] input, int x){
+		/* Your class should be named Solution
+		 * Don't write main().
+		 * Don't read input, it is passed as function argument.
+		 * Print output and don't return it.
+	 	 * Taking input is handled automatically.
+		*/
+		
+        int sum = 0;
+        
+        for(int i=0;i<input.length-2;i++){
+            
+            for(int j=i+1;j<input.length-1;j++){
+                
+                for(int k=j+1;k<input.length;k++){
+                
+                sum=input[i]+input[j]+input[k];
+                
+                if(sum==x){
+                    
+                    if(input[i]<input[j] && input[i]<input[k]){
+                        if(input[j]<input[k])
+                            System.out.println(input[i]+" "+input[j]+" "+input[k]);
+                    else
+                            System.out.println(input[i]+" "+input[k]+" "+input[j]);
+                    }  
+                  
+                   
+                    else if(input[j]<input[i] && input[j]<input[k]){
+                        if(input[i]<input[k])
+                            System.out.println(input[j]+" "+input[i]+" "+input[k]);
+                    else
+                            System.out.println(input[j]+" "+input[k]+" "+input[i]);
+                    }
+                    
+                    
+                    else {                    
+                    if(input[k]<input[i] && input[k]<input[j]){
+                        if(input[i]<input[j])
+                            System.out.println(input[k]+" "+input[i]+" "+input[j]);
+                    else
+                            System.out.println(input[k]+" "+input[j]+" "+input[i]);
+                      }
+                    
+                    }
+                    
+                    
+                    
+                  }  
+                }
+            }
+        }        
+    }
+}
