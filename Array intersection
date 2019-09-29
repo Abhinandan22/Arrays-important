@@ -12,7 +12,7 @@ public class Solution{
             for(int j=0;j<input2.length;j++){
                 if(input1[i]==input2[j]){
                     System.out.println(input1[i]);
-                    input2[j]=Integer.MIN_VALUE;
+                    input2[j]=Integer.MIN_VALUE;          /// Changing the value to -infinity or by using max to +infinity so that we cannot get it for duplicate comparison
                     break;
                 }
             }
