@@ -18,5 +18,5 @@ Scanner sc = new Scanner(System.in);
                   
                   sum+=input[i][j];
               }
-          System.out.println(sum+" ");
+          System.out.print(sum+" ");
           }
